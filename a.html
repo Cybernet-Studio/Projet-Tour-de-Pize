@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Panier</button>
+  <div id="myDropdown" class="dropdown-content">
+      <div>
+    <h3 class="commandeCours">Commande en Cours</h3>
+    <a href="#home">article 1 : 00.00€</a>
+    <a href="#about">article 2 : 00.00€</a>
+    <a href="#contact">article 3 : 00.00€</a>
+    <button>Valider la Commande : 000.00 €</button>
+  </div>
+  
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
